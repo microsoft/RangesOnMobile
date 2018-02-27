@@ -74,3 +74,8 @@ The application incorporates (and modifies) the following [CC BY 3.0](https://cr
 - [jshint-loader](https://www.npmjs.com/package/jshint-loader) ([MIT license](http://spdx.org/licenses/MIT.html))
 - [express](https://www.npmjs.com/package/express) ([MIT license](http://spdx.org/licenses/MIT.html))
 - [concurrently](https://www.npmjs.com/package/concurrently) ([MIT license](http://spdx.org/licenses/MIT.html))
+
+## Additional attribution
+
+`public/preloader.js` (preloading image assets) uses code published in a blog post by Dimitar Christoff on 2012-05-18 (no license provided) "[Preloading images using javascript, the right way and without frameworks](http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html)": [http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html](http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html)
+	
