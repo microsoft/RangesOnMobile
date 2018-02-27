@@ -1,0 +1,7 @@
+node_modules
+yarn.lock
+*.log
+.vscode
+bash.exe.stackdump
+package-lock.json
+public/main.js

@@ -1,0 +1,89 @@
+<!doctype html>
+<html xmnls="http://www.w3.org/1999/xhtml">
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="cache-control" content="no-cache, no-store">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="MB">
+    <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>ranges on mobile study</title>
+    <link rel="stylesheet" href="./css/style.css" charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+
+  </head>
+
+  <body ontouchstart="">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.2/socket.io.min.js" charset="UTF-8"></script> -->
+    <script type="text/javascript" src="main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="preloader.js" charset="UTF-8"></script>     
+    <script>
+
+      imagesArray = [
+        "assets/wifi.svg",
+        "assets/sunrise.svg",
+        "assets/sleep.svg",
+        "assets/read_temp.svg",
+        "assets/read_sleep.svg",
+        "assets/radial_year_temp.svg",
+        "assets/radial_year_sleep.svg",
+        "assets/radial_week_temp.svg",
+        "assets/radial_week_sleep.svg",
+        "assets/radial_month_temp.svg",
+        "assets/radial_month_sleep.svg",
+        "assets/portrait.svg",
+        "assets/pointing_temp.svg",
+        "assets/pointing_sleep.svg",
+        "assets/pointing_temp_monthly.svg",
+        "assets/pointing_sleep_monthly.svg",
+        "assets/nonav.svg",
+        "assets/min_sleep.svg",
+        "assets/max_temp.svg",
+        "assets/linear_year_temp.svg",
+        "assets/linear_year_sleep.svg",
+        "assets/linear_week_temp.svg",
+        "assets/linear_week_sleep.svg",
+        "assets/linear_month_temp.svg",
+        "assets/linear_month_sleep.svg",
+        "assets/hot.svg",
+        "assets/holdingphone.svg",
+        "assets/compare_temp.svg",
+        "assets/compare_sleep.svg",
+        "assets/compare_bw_temp.svg",
+        "assets/compare_bw_sleep.svg",
+        "assets/cold.svg",
+        "assets/brightness.svg",
+        "assets/battery.svg"
+      ];
+
+      new preLoader(imagesArray, {
+        onProgress: function(img, imageEl, index){
+            // fires every time an image is done or errors.
+            // imageEl will be falsy if error
+            // console.log('just ' +  (!imageEl ? 'failed: ' : 'loaded: ') + img);
+            // imageContainer.appendChild(imageEl);
+            // can access any propery of this
+            // console.log(this.completed.length + this.errors.length + ' / ' + this.queue.length + ' done');
+        },
+        onComplete: function(loaded, errors){
+            // fires when whole list is done. cache is primed.
+            console.log('assets loaded:', loaded);
+            // imageContainer.style.display = 'block';
+            if (errors){
+                console.log('the following failed', errors);
+            }
+        }
+      });
+    </script>
+
+  </body>
+
+</html>

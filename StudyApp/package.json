@@ -1,0 +1,32 @@
+{
+  "name": "rangesonmobile",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "repository": "",
+  "author": "mattbrehmer",
+  "license": "MIT",
+  "dependencies": {
+    "clipboard": "^1.7.1",
+    "d3": "^4.9.1",
+    "moment": "^2.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.2",
+    "jshint": "^2.9.5",
+    "jshint-loader": "^0.8.4",
+    "serve": "^6.4.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-middleware": "^1.12.2",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "optionalDependencies": {
+    "d3": "^4.9.1",
+    "moment": "^2.18.1"
+  },
+  "scripts": {
+    "start": "concurrently --kill-others \"webpack --watch --display-error-details\" \"node app.js\" &",
+    "watch": "webpack-dev-server --inline --colors"
+  }
+}

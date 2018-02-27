@@ -1,0 +1,654 @@
+@charset "UTF-8";
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 812px)
+and (max-device-height: 812px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+
+  body, input, textarea, select, text {
+    
+    margin: 0px;
+    padding: 0px;
+    background-color: #252525;  
+    touch-action: none;
+    -webkit-appearance: none;
+    user-select: none;
+  }
+
+  #landscape_btn {
+    display: none;
+  }
+  
+  text, input, span {
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-size: 0.7em;
+    font-weight: 300;
+    font-stretch: condensed;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+
+  #main_div {
+    display: block;
+    margin: auto;
+  }
+
+  #task_div, #sandbox_div, #menu_div, #introduction_div {
+    position: absolute;
+    top: 0px;
+  }
+
+  #task_div, #sandbox_div, #introduction_div {
+    visibility: hidden;
+  }
+  
+  #main_svg {
+    border: 1px solid #999;
+    margin-bottom: 5px;
+  } 
+  
+  .chart_range {
+    z-index: -1;
+    border: 0px solid transparent;
+    fill: #fff;
+  }
+  
+  rect.midnight, text.midnight {
+    border: 1px solid #999;
+    fill: #999;
+    font-size: 0.7em;
+  }
+  
+  .target_range {
+    z-index: -1;  
+    fill: #eee;
+  }
+  
+  circle.target_range {
+    fill: #fff;
+    stroke: transparent;
+    stroke-width: 0px;
+  }
+  
+  circle.midnight {
+    stroke-width: 1px;
+    stroke: #999;
+    fill: transparent;
+  }
+  
+  #target_range_start, #target_range_end {
+    fill: #999;
+    font-size: 0.7em;
+  }
+  
+  .data_element {
+    z-index: 1;
+  }
+  
+  .date_line {
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-dasharray: 0.1em;
+  }
+  
+  .touch_line {
+    stroke: gold;
+    fill:none;
+    stroke-linecap: round;
+    stroke-width: 2px;    
+  }
+  
+  .hint, .specified_date {
+    stroke: aquamarine;
+    fill: aquamarine;
+  }
+
+  .specified_date_region {
+    stroke: aquamarine;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    fill: none;
+  }
+  
+  .data_element .element_end, .data_element .element_start {
+    opacity: 0.6;
+    font-size: 0.7em;
+  }
+  
+  .radial_data_element rect, .radial_data_element path {
+    stroke: #ccc;
+    stroke-width: 2px;
+  }
+  
+  .data_element text {
+    text-align: center; 
+  }
+
+  .element_date_top {
+    font-size: 0.85em;
+    font-weight: 600;
+  }
+
+  .element_date_bottom {
+    font-size: 0.8em;
+  }
+  
+  .control_div {
+    vertical-align: middle;
+    display: table-cell;
+    margin-bottom: 10px;
+  }
+  .guide_line {
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-dasharray: 0.1em;
+  }
+
+  .guide_label {
+    font-size: 0.6em;
+    line-height:2;
+    font-weight: 600;
+  }
+  
+  .guide_circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-dasharray: 0.1em;
+  }
+  
+  .baseline_value {
+    fill: #777;
+    stroke: transparent;
+  }
+
+  .baseline_end, .baseline_start {
+    stroke-width: 1px;
+    stroke: #777;
+  }
+  
+  .observed_value {
+    stroke-width: 1px;
+    stroke: transparent;
+  }
+  
+  .toolbar {
+    vertical-align: middle;
+    margin: 0px;
+  }
+  
+  label > input {
+    visibility: hidden;
+    position: absolute;
+    height: 0px;
+    width: 0px;
+  }
+  
+  .menu_rb {
+    cursor: pointer;
+  }
+  
+  #start_btn, #feedback_btn, #timed_trial_warning {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 16px;
+    transform: translate(-50%,-50%);
+    border-color: #fff;
+    box-shadow: #000 3px 3px 3px;
+    -webkit-box-shadow: #000 3px 3px 3px;
+  }
+
+  #timed_trial_warning {
+    font-size: 12px;
+  }
+  
+  #submit_btn {   
+    left: 50%;
+    width: 90%;
+    font-weight: 600;
+    transform: translate(-50%,0%);
+    position: fixed;
+    bottom: 10px;
+  }
+
+  #submit_btn_done {   
+    width: 48%;
+    font-weight: 600;
+    color: gold;
+    position: absolute;
+    bottom: -45px;
+    left: 100%;
+    transform: translate(-100%,0%);
+  }
+
+  #submit_btn_equal {   
+    width: 48%;
+    font-weight: 600;
+    position: absolute;
+    bottom: -45px;
+    left: 0%;
+    transform: translate(0%,0%);
+  }
+  
+  #submit_btn_a {
+    width: 32%;
+    font-size: 11px;
+    font-weight: 600;
+    left: 0%;
+    bottom: -45px;
+    transform: translate(0%,0%);
+    position: absolute;
+  }
+  
+  #submit_btn_b {
+    width: 32%;
+    font-size: 11px;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    bottom: -45px;
+    transform: translate(-50%,0%);
+  }
+
+  #submit_btn_c {
+    width: 32%;
+    font-size: 11px;
+    position: absolute;
+    bottom: -45px;
+    font-weight: 600;
+    left: 100%;
+    transform: translate(-100%,0%);
+  }
+
+  .correct_incorrect {
+    color: #111;
+    font-weight: 400;
+    font-size: 1.6em;
+  }
+
+  .instruction_svg_title {
+    fill: gold;
+    font-weight: 400;
+  }
+  
+  .img_btn_enabled, .img_btn_enabled:visited, .menu_btn_enabled, .feedback_btn_enabled, #task_instruction_screen, .task_instruction_dismiss_btn, .btn {
+    margin: 0px;
+    cursor: pointer;
+    color: gold;
+    transform: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    box-shadow: #111 0px 1px 1px;
+    -webkit-box-shadow: #111 0px 1px 1px;
+    
+    display: inline-block;  
+    background-color: #333;  
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#444));
+    background-image: -webkit-linear-gradient(top, #333, #444);
+    background-image: -moz-linear-gradient(top, #333, #444);
+    background-image: -ms-linear-gradient(top, #333, #444);
+    background-image: -o-linear-gradient(top, #333, #444);
+    background-image: linear-gradient(to bottom, #333, #444);
+    background-image: linear-gradient(to bottom, #333, #444);
+    user-select: none;
+  }
+  
+  .menu_btn_enabled, .menu_btn_disabled, .btn {
+    width: 95%;
+    height: 40px;
+    transform: translate(2.5%);
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-bottom: 10px;  
+    border-color: #fff;
+    box-shadow: #111 3px 3px 3px;
+    -webkit-box-shadow: #111 3px 3px 3px;
+  }
+
+  #task_instruction_screen {
+    width:95%;
+    height:95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+    transform: translate(-50%,-50%);
+    border-color: #fff;
+    box-shadow: #000 3px 3px 3px;
+    -webkit-box-shadow: #000 3px 3px 3px;
+  }
+
+  .task_instruction_span {
+    left: 50%;
+    transform: translate(-50%,0%);
+    border-color: #fff;
+    font-size: 0.8em;
+    position: relative;
+    float: left;
+    padding:5px;
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .feedback_btn_enabled {
+    width: 90%;
+    height: 100px;
+    font-size: 0.7em;
+    font-weight: 400;
+
+    margin-bottom: 10px;
+  }
+
+  .task_instruction_dismiss_btn {
+    width: 90%;
+    font-weight: 400;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%,-25%);
+    color: gold;
+    height: 40px;
+  }
+  
+  .img_btn_enabled:active, .img_btn_enabled:focus, .menu_btn_enabled:focus, .menu_btn_enabled:active, .btn:focus, .btn:active {
+    border: 1px solid gold;
+    background-color: #333;
+    color: gold;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#333));
+    background-image: -webkit-linear-gradient(top, #444, #333);
+    background-image: -moz-linear-gradient(top, #444, #333);
+    background-image: -ms-linear-gradient(top, #444, #333);
+    background-image: -o-linear-gradient(top, #444, #333);
+    background-image: linear-gradient(to bottom, #444, #333);
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#444, endColorstr=#333);
+  }
+  
+  .img_btn_disabled, .menu_btn_disabled {
+    filter: grayscale(100%);
+    color: #999;
+    background-color: #333;
+    cursor: default;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    user-select: none;
+  }
+  
+  .overlay {
+    fill: transparent;
+    stroke: transparent;
+  }
+  
+  .focus text {
+    fill: gold;
+    font-weight: 400;
+  }
+  
+  .focus_circle, .focus_line {
+    fill: none;
+    stroke: gold;
+    stroke-width: 2px; 
+  }
+  
+  .focus_rect {
+    fill: #222;
+    stroke: gold;
+  }
+  
+  #date_indicator {
+    fill: #ccc;
+    font-weight: 400;
+    user-select: none;
+    font-size: 0.5em;
+  }
+  
+  #instruction_div {
+    height: 60px;
+    width: 100%;
+  }
+  
+  #instruction_text, #button_text {
+    font-size: 0.8em;
+    position: relative;
+    float: left;
+    padding:5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    user-select: none;
+  }
+
+  .consent_text {
+    font-size: 1em;
+    position: relative;
+    float: left;
+    padding:5px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    text-align: left; 
+    user-select: none;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  #button_text {
+    font-size: 1em;
+  }
+  
+  .instruction_emphasis {
+    font-size: 1em;
+    font-weight: 400;
+    color: gold;
+  }
+
+  .instruction_emphasis_low {
+    font-size: 1em;
+    font-weight: 400;
+    color: #91bfdb;
+  }
+
+  .instruction_emphasis_high {
+    font-size: 1em;
+    font-weight: 400;
+    color: #fc8d59;
+  }
+  
+  .blurme { 
+    -webkikt-filter: url('#myblurfilter'); 
+    filter: url('#myblurfilter'); 
+  }
+
+}
+
+@media only screen 
+and (orientation: landscape) {
+  
+  body, text {
+    margin: 0px;
+    padding: 0px;
+    background-color: #252525;  
+    overflow: hidden;
+    overflow-y: hidden;
+    touch-action: none;
+    -webkit-appearance: none;
+  }
+  
+  text, span {
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    font-stretch: condensed;
+    transform: translate(-12.5%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+  }
+
+  div {
+    display: none;
+  }
+
+  #landscape_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 16px;
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-weight: 400;
+    font-stretch: condensed;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+    transform: translate(-50%,-50%);
+    box-shadow: #000 3px 3px 3px;
+    -webkit-box-shadow: #000 3px 3px 3px;
+    margin: 0px;
+    cursor: pointer;
+    transform: all 0.3s ease;
+    border: 1px solid #ccc;
+    display: inline-block;  
+    user-select: none;
+    width: 90%;
+    height: 100px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen 
+and (min-device-width: 812px) {
+
+  body, text {
+    margin: 0px;
+    padding: 0px;
+    background-color: #252525;  
+    overflow: hidden;
+    overflow-y: hidden;
+    touch-action: none;
+    -webkit-appearance: none;
+  }
+  
+  text, span {
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    font-stretch: condensed;
+    transform: translate(-12.5%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+  }
+
+  #landscape_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 16px;
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-weight: 400;
+    font-stretch: condensed;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+    transform: translate(-50%,-50%);
+    box-shadow: #000 3px 3px 3px;
+    -webkit-box-shadow: #000 3px 3px 3px;
+    margin: 0px;
+    cursor: pointer;
+    transform: all 0.3s ease;
+    border: 1px solid #ccc;
+    display: inline-block;  
+    user-select: none;
+    width: 90%;
+    height: 100px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  div {
+    display: none;
+  }
+}
+
+@media only screen 
+and (min-device-height: 812px) {
+
+  body, text {
+    margin: 0px;
+    padding: 0px;
+    background-color: #252525;  
+    overflow: hidden;
+    overflow-y: hidden;
+    touch-action: none;
+    -webkit-appearance: none;
+  }
+  
+  text, span {
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    font-stretch: condensed;
+    transform: translate(-12.5%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    text-align: center;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+  }
+
+  div {
+    display: none;
+  }
+
+  #landscape_btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 16px;
+    user-select: none;
+    color: #fff;
+    fill: #fff;
+    font-weight: 400;
+    font-stretch: condensed;
+    font-family: 'Roboto',"Apple SD Gothic Neo", "Segoe UI Web Regular","wf_segoe-ui_normal","Segoe UI","Segoe UI Symbol","Myriad","Calibri","UnDotum","Damascus","Futura","Helvetica Neue","BBAlpha Sans","S60 Sans","Arial",sans-serif;
+    transform: translate(-50%,-50%);
+    box-shadow: #000 3px 3px 3px;
+    -webkit-box-shadow: #000 3px 3px 3px;
+    margin: 0px;
+    cursor: pointer;
+    transform: all 0.3s ease;
+    border: 1px solid #ccc;
+    display: inline-block;  
+    user-select: none;
+    width: 90%;
+    height: 100px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+}
