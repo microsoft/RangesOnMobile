@@ -8,7 +8,7 @@ loadData <- function(path) {
   do.call(rbind, tables)
 }
 
-participant_data <- loadData("mturk_temperature")
+participant_data <- loadData(paste("mturk_",datatype,sep = ""))
 
 #----------------------------------
 # PHONE DIMS
@@ -86,7 +86,7 @@ init.df$Event <- init.df$Event %>% as.factor()
 init.df$FirstRepresentation <- init.df$FirstRepresentation %>% as.factor()
 init.df$user_id <- init.df$user_id %>% as.factor()
 
-participant_metadata.df <- read.csv(file="mturk_temperature_metadata.csv")
+participant_metadata.df <- read.csv(file=paste("mturk_",datatype,"_metadata.csv",sep = ""))
 
 names(participant_metadata.df)[names(participant_metadata.df) == 'ï..user_id'] <- 'user_id'
 

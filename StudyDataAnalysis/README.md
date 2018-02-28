@@ -12,15 +12,11 @@ Maintained by [github.com/mattbrehmer](https://github.com/mattbrehmer).
 
 2. Ensure that [R](https://www.r-project.org/) is installed.
 
-3. In processLogCSVs.R, search for and edit the `loadData(...)` function call to point to your directory of log files (the default is to load log files from our temperature range data experiment).
+3. processLogCSVs.R will ingest log files as exported from [Azure Application Insights](https://azure.microsoft.com/en-us/services/application-insights/). If you did not use appInsights and wrote your own custom logging protocol for the StudyApp, you will need to modify processLogCSVs.R to match the format of your log files. 
 
-4. In processLogCSVs.R, search for and edit the `participant_metadata.df <- read.csv(...)` assignment to point to your .csv file containing participant metadata (the default is to load participant metadata from our temperature range data experiment).
+4. In the R terminal, `> source(main.R)`, which will process the log files, compute (bootstrap) CIs for time and error, and export plots. Depending on how powerful your machine is, the bootstrap CI calculations may take a few minutes.
 
-4. processLogCSVs.R will ingest log files as exported from [Azure Application Insights](https://azure.microsoft.com/en-us/services/application-insights/). If you did not use appInsights and wrote your own custom logging protocol for the StudyApp, you will need to modify processLogCSVs.R to match the format of your log files. 
-
-5. In the R terminal, `> source(main.R)`, which will process the log files, compute (bootstrap) CIs for time and error, and export plots. Depending on how powerful your machine is, the bootstrap CI calculations may take a few minutes.
-
-6. All of the .pdf and .png charts will appear in this directory.
+5. All of the .pdf and .png charts will appear in this directory.
 
 ## 3rd party package dependencies:
 
