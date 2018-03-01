@@ -1,33 +1,3 @@
-RT_r.df$datatype = 
-RT_r_diff.df$datatype = 
-RT_g.df$datatype = 
-RT_g_diff.df$datatype = 
-RT_t.df$datatype = 
-RT_t_diff.df$datatype = 
-
-err_rate_r.df$datatype = 
-err_rate_r_diff.df$datatype = 
-err_rate_g.df$datatype = 
-err_rate_g_diff.df$datatype = 
-err_rate_t.df$datatype = 
-err_rate_t_diff.df$datatype = 
-
-err_r.df$datatype = 
-err_r_diff.df$datatype = 
-err_g.df$datatype = 
-err_g_diff.df$datatype = 
-err_t.df$datatype = 
-err_t_diff.df$datatype = 
-
-compare_between_err_r.df$datatype = 
-compare_between_err_r_diff.df$datatype = 
-compare_between_err_g.df$datatype = 
-compare_between_err_g_diff.df$datatype = 
-
-preference_CI.df$datatype = 
-conf_r.df$datatype = 
-conf_r_diff.df$datatype = 
-
 plot_RT_r <- barChart(RT_r.df,RT_r.df$representation,nbTechs = 2, ymin = 2, ymax = 9, "", paste("[",datatype," data] ","Trial Completion Time in Seconds. Error Bars, 95% CIs",sep = ""))
 plot_RT_r_diff <- barChart(RT_r_diff.df,RT_r_diff.df$ratio,nbTechs = 1, ymin = 0.85, ymax = 1.75, "", paste("[",datatype," data] ","Trial Completion Time Ratios. Error Bars, 95% CIs",sep = ""))
 plot_RT_g <- barChart(RT_g.df,RT_g.df$granularity,nbTechs = 3, ymin = 2, ymax = 9, "", paste("[",datatype," data] ","Trial Completion Time in Seconds. Error Bars, 95% CIs",sep = ""))

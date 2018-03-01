@@ -154,6 +154,16 @@ ggsave(plot = plot_err_rate_t, filename = "plot_err_rate_t.png", device ="png", 
 print("plot_err_rate_t.png")
 ggsave(plot = plot_err_rate_t_diff, filename = "plot_err_rate_t_diff.png", device ="png", width = 8, height = 4, units = "in", dpi = 300)
 print("plot_err_rate_t_diff.png")
+
+ggsave(plot = plot_compare_between_err_r, filename = "plot_compare_between_err_r.png", device ="png", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_r.png")
+ggsave(plot = plot_compare_between_err_r_diff, filename = "plot_compare_between_err_r_diff.png", device ="png", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_r_diff.png")
+ggsave(plot = plot_compare_between_err_g, filename = "plot_compare_between_err_g.png", device ="png", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_g.png")
+ggsave(plot = plot_compare_between_err_g_diff, filename = "plot_compare_between_err_g_diff.png", device ="png", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_g_diff.png")
+
 ggsave(plot = plot_pref_r, filename = "plot_pref_r.png", device ="png", width = 8, height = 2, units = "in", dpi = 300)
 print("plot_pref_r.png")
 ggsave(plot = plot_conf_r, filename = "plot_conf_r.png", device ="png", width = 8, height = 2, units = "in", dpi = 300)
@@ -197,6 +207,16 @@ ggsave(plot = plot_err_rate_t, filename = "plot_err_rate_t.pdf", device ="pdf", 
 print("plot_err_rate_t.pdf")
 ggsave(plot = plot_err_rate_t_diff, filename = "plot_err_rate_t_diff.pdf", device ="pdf", width = 8, height = 4, units = "in", dpi = 300)
 print("plot_err_rate_t_diff.pdf")
+
+ggsave(plot = plot_compare_between_err_r, filename = "plot_compare_between_err_r.pdf", device ="pdf", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_r.pdf")
+ggsave(plot = plot_compare_between_err_r_diff, filename = "plot_compare_between_err_r_diff.pdf", device ="pdf", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_r_diff.pdf")
+ggsave(plot = plot_compare_between_err_g, filename = "plot_compare_between_err_g.pdf", device ="pdf", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_g.pdf")
+ggsave(plot = plot_compare_between_err_g_diff, filename = "plot_compare_between_err_g_diff.pdf", device ="pdf", width = 8, height = 1.5, units = "in", dpi = 300)
+print("plot_compare_between_err_g_diff.pdf")
+
 ggsave(plot = plot_pref_r, filename = "plot_pref_r.pdf", device ="pdf", width = 8, height = 2, units = "in", dpi = 300)
 print("plot_pref_r.pdf")
 ggsave(plot = plot_conf_r, filename = "plot_conf_r.pdf", device ="pdf", width = 8, height = 2, units = "in", dpi = 300)
