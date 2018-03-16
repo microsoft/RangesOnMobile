@@ -1,6 +1,4 @@
-# The Graphical Perception of Ranges Over Time on Mobile Phones
-
-## Application Source Code
+# RangesOnMobile: Application Source Code
 
 A mobile-only web application for evaluating alternative visual representations of quantitative ranges for value retrieval and comparison tasks spanning different granularities of time. 
 

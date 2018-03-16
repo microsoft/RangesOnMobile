@@ -1,6 +1,4 @@
-# The Graphical Perception of Ranges Over Time on Mobile Phones
-
-## Study Data + Analysis Scripts
+# RangesOnMobile: Study Data + Analysis Scripts
 
 Analyzing the results of an graphical perception study focusing on the display of quantitative ranges on mobile devices.
 
