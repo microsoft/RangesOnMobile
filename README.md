@@ -1,5 +1,14 @@
+# The Graphical Perception of Ranges Over Time on Mobile Phones
 
-# Contributing
+By [Matthew Brehmer (Microsoft Research)](mailto:mabrehme@microsoft.com), [Bongshin Lee (Microsoft Research)](mailto:bongshin@microsoft.com), [Petra Isenberg (Inria)](mailto:petra.isenberg@inria.fr), and [Eun Kyoung Choe (University of Maryland)](mailto:choe@umd.edu)
+
+This repository is maintained by [github.com/mattbrehmer](https://github.com/mattbrehmer). It contains supplemental material for a paper submission to the 2018 IEEE InfoVis conference including [source code for software used in an experiment](StudyApp) as well as [experimental data and analysis scripts](StudyDataAnalysis).
+
+<img src="temperature.png" title="Six temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. From left to right, the gradient bars encode observed temperature ranges for every day in a week, month, and year, superimposed on gray bars encoding average temperature ranges. The linear and radial range charts display the same data."  alt="Six temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. From left to right, the gradient bars encode observed temperature ranges for every day in a week, month, and year, superimposed on gray bars encoding average temperature ranges. The linear and radial range charts display the same data." style="width: 100%;"/>
+
+**Figure**: Six temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. From left to right, the gradient bars encode observed temperature ranges for every day in a week, month, and year, superimposed on gray bars encoding average temperature ranges. The linear and radial range charts display the same data.
+
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
