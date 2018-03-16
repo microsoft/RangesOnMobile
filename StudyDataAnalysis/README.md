@@ -2,7 +2,7 @@
 
 Analyzing the results of an graphical perception study focusing on the display of quantitative ranges on mobile devices.
 
-Maintained by [github.com/mattbrehmer](https://github.com/mattbrehmer).
+Maintained by [Matthew Brehmer](https://github.com/mattbrehmer).
 
 ## Usage
 

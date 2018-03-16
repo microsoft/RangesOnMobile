@@ -2,7 +2,7 @@
 
 A mobile-only web application for evaluating alternative visual representations of quantitative ranges for value retrieval and comparison tasks spanning different granularities of time. 
 
-Maintained by [github.com/mattbrehmer](https://github.com/mattbrehmer).
+Maintained by [Matthew Brehmer](https://github.com/mattbrehmer).
 
 ## Setup / Testing
 
