@@ -35,10 +35,13 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
   
   g <- g + scale_color_manual(values = c("#1F77B4", "#FF7F0E")) +
     labs(x = xAxisLabel, y = yAxisLabel) + 
-    scale_y_continuous(limits = c(ymin,ymax)) +
+    # scale_y_continuous(limits = c(ymin,ymax)) +
+    scale_y_continuous(limits = c(ymin,ymax), labels = scales::percent) +
     scale_x_discrete(name="",breaks,techniques)+
     coord_flip() +
     theme(panel.background = element_rect(fill = '#F5F5DC', colour = 'white'),
+    # theme(panel.background = element_rect(fill = '#EEEEEE', colour = 'white'),
+          axis.text.x = element_text(size=8),
           axis.title=element_blank(),
           axis.text.y=element_text(colour = "black",face = "italic"),
           legend.title = element_blank(),
@@ -50,6 +53,7 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
           panel.spacing = unit(0.5, "lines"),
           strip.background = element_rect(fill = "NA"),
           strip.placement = "outside",
+          # strip.text.x = element_blank(),
           strip.text = element_text(face = "bold",size=8),
           strip.text.y = element_text(angle = 180))
 

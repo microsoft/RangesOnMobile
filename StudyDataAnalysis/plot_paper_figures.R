@@ -60,7 +60,7 @@ compare_between_err_r_min.df$task_name <- revalue(compare_between_err_r_min.df$t
 
 plot_compare_between_err_r_min <- dualChart(compare_between_err_r_min.df,compare_between_err_r_min.df$representation,nbTechs = 2, ymin = 0, ymax = 0.6, "", "Error Magnitude (% of data domain). Error Bars, 95% CIs", 0)
 
-ggsave(plot = plot_compare_between_err_r_min, filename = "plot_compare_between_err_r_min.pdf", device ="pdf", width = 7.5, height = 1, units = "in", dpi = 300)
+ggsave(plot = plot_compare_between_err_r_min, filename = "plot_compare_between_err_r_min.pdf", device ="pdf", width = 7.5, height = 0.75, units = "in", dpi = 300)
 
 
 #preference
@@ -71,6 +71,10 @@ preference_CI_min.df$task_name <- revalue(preference_CI_min.df$task_name, c("Wee
                                                                             "Month" = "M",
                                                                             "Year" = "Y"
 ))
+preference_CI_min.df$mean <- preference_CI_min.df$mean / 100
+preference_CI_min.df$lowerBound_CI <- preference_CI_min.df$lowerBound_CI / 100
+preference_CI_min.df$upperBound_CI <- preference_CI_min.df$upperBound_CI / 100
+
 preference_CI_min.df$representation <- revalue(preference_CI_min.df$representation, c("radial" = "R","linear" = "L"))
 
 plot_pref_r_min <- dualChart(preference_CI_min.df,preference_CI_min.df$representation,nbTechs = 2, ymin = 0, ymax = 100, "", "", 0)
@@ -99,7 +103,7 @@ ggsave(plot = plot_conf_r_min, filename = "plot_conf_r_min.pdf", device ="pdf", 
 
 RT_r_diff_min.df <- RT_r_diff.df
 
-RT_r_diff_min.df$ratio <- revalue(RT_r_diff_min.df$ratio, c("Radial - Linear" = "R-L"))
+RT_r_diff_min.df$ratio <- revalue(RT_r_diff_min.df$ratio, c("Radial - Linear" = "R : L"))
 RT_r_diff_min.df$task_name <- revalue(RT_r_diff_min.df$task_name, c("All Tasks" = "Overall",
                                                           "Locate Date" = "T1-LD",
                                                           "Read Value" = "T2-RV",
@@ -142,11 +146,12 @@ RT_r_shrink.df <- RT_r_diff.df
 RT_r_shrink.df <- RT_r_shrink.df[RT_r_shrink.df$task_name == "All Tasks",]
 RT_r_shrink.df <- RT_r_shrink.df[RT_r_shrink.df$facet != "All Granularities",]
 RT_r_shrink.df$task_name <- RT_r_shrink.df$facet
-RT_r_shrink.df$ratio <- revalue(RT_r_shrink.df$ratio, c("Radial - Linear" = "R-L"))
+RT_r_shrink.df$ratio <- revalue(RT_r_shrink.df$ratio, c("Radial - Linear" = "R : L"))
 RT_r_shrink.df$task_name <- revalue(RT_r_shrink.df$task_name, c("Week" = "W",
                                                                 "Month" = "M",
                                                                 "Year" = "Y"
 ))
+RT_r_shrink.df$task_name <- ordered(RT_r_shrink.df$task_name, levels = c("Y", "M", "W"))
 RT_r_shrink.df$facet <- ""
 
 plot_RT_r_shrink <- dualChart(RT_r_shrink.df,RT_r_shrink.df$ratio,nbTechs = 1, ymin = 0.95, ymax = 1.45, "", "", 1)
@@ -161,9 +166,9 @@ RT_g_diff_min.df <- RT_g_diff_min.df[RT_g_diff_min.df$facet == "Both Representat
 RT_g_diff_min.df$task_name <- revalue(RT_g_diff_min.df$task_name, c("All Tasks" = "Overall",
                                                                     "Locate Min / Max" = "T3-LM"
 ))
-RT_g_diff_min.df$ratio <- revalue(RT_g_diff_min.df$ratio, c("Month - Week" = "M-W",
-                                                            "Year - Month" = "Y-M",
-                                                            "Year - Week" = "Y-W"
+RT_g_diff_min.df$ratio <- revalue(RT_g_diff_min.df$ratio, c("Month - Week" = "M : W",
+                                                            "Year - Month" = "Y : M",
+                                                            "Year - Week" = "Y : W"
 ))
 
 plot_RT_g_diff_min <- dualChart(RT_g_diff_min.df,RT_g_diff_min.df$ratio ,nbTechs = 3, ymin = 0.95, ymax = 2.5, "", "", 1)
@@ -211,7 +216,7 @@ ggsave(plot = plot_err_diff_g_min, filename = "plot_err_diff_g_min.pdf", device 
 
 RT_t_diff_min.df <- RT_t_diff.df
 RT_t_diff_min.df <- RT_t_diff_min.df[RT_t_diff_min.df$task_name != "RV + LM/M + CV",]
-RT_t_diff_min.df$ratio <- revalue(RT_t_diff_min.df$ratio, c("Radial - Linear" = "R-L"))
+RT_t_diff_min.df$ratio <- revalue(RT_t_diff_min.df$ratio, c("Radial - Linear" = "R : L"))
 RT_t_diff_min.df$task_name <- revalue(RT_t_diff_min.df$task_name, c("Read Value" = "T2-RV",
                                                                     "Locate Min / Max" = "T3-LM",
                                                                     "Compare Values" = "T4-CV"
