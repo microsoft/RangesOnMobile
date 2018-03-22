@@ -6,7 +6,7 @@ This repository is maintained by [Matthew Brehmer](https://github.com/mattbrehme
 
 <img src="temperature.png" title="Linear and Radial temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. The gradient bars encode observed temperature ranges and are superimposed on gray bars encoding average temperature ranges. Corresponding Week, Month, and Year charts display the same data."  alt="Linear and Radial temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. The gradient bars encode observed temperature ranges and are superimposed on gray bars encoding average temperature ranges. Corresponding Week, Month, and Year charts display the same data." style="width: 100%;"/>
 
-**Figure**: Six temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. From left to right, the gradient bars encode observed temperature ranges for every day in a week, month, and year, superimposed on gray bars encoding average temperature ranges. The linear and radial range charts display the same data.
+**Figure**: Linear and Radial temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. The gradient bars encode observed temperature ranges and are superimposed on gray bars encoding average temperature ranges. Corresponding Week, Month, and Year charts display the same data.
 
 ## Contributing
 
