@@ -21,6 +21,7 @@ Maintained by [Matthew Brehmer](https://github.com/mattbrehmer).
 - [reshape2](https://cran.r-project.org/web/packages/reshape2/index.html) ([MIT license](https://cran.r-project.org/web/packages/reshape2/LICENSE))
 - [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html) ([GPL-2 license](https://cran.r-project.org/web/packages/ggplot2/LICENSE))
 - [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html) ([MIT license](https://cran.r-project.org/web/packages/dplyr/LICENSE))
+- [plyr](https://cran.r-project.org/web/packages/plyr/index.html) ([MIT license](https://cran.r-project.org/web/packages/plyr/LICENSE))
 - [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) ([MIT license](https://cran.r-project.org/web/packages/jsonlite/LICENSE))
 - [boot](https://cran.r-project.org/web/packages/boot/index.html) ([Unlimited license](https://cran.r-project.org/web/packages/boot/index.html))
 - [PropCIs](https://cran.r-project.org/web/packages/PropCIs/index.html) ([GPL-3](https://cran.r-project.org/web/licenses/GPL-3))
