@@ -2,7 +2,7 @@
 
 By [Matthew Brehmer (Microsoft Research)](mailto:mabrehme@microsoft.com), [Bongshin Lee (Microsoft Research)](mailto:bongshin@microsoft.com), [Petra Isenberg (Inria)](mailto:petra.isenberg@inria.fr), and [Eun Kyoung Choe (University of Maryland)](mailto:choe@umd.edu)
 
-This repository is maintained by [Matthew Brehmer](https://github.com/mattbrehmer). It contains supplemental material for a journal paper submission(http://ieeevis.org/year/2018/info/call-participation/infovis-paper-types) including [source code for software used in an experiment](StudyApp) as well as [experimental data and analysis scripts](StudyDataAnalysis).
+This repository is maintained by [Matthew Brehmer](https://github.com/mattbrehmer). It contains supplemental material for a journal paper submission including [source code for software used in an experiment](StudyApp) as well as [experimental data and analysis scripts](StudyDataAnalysis).
 
 <img src="temperature.png" title="Linear and Radial temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. The gradient bars encode observed temperature ranges and are superimposed on gray bars encoding average temperature ranges. Corresponding Week, Month, and Year charts display the same data."  alt="Linear and Radial temperature range charts designed for mobile phone displays, representative of the stimuli used in our crowdsourced experiment. The gradient bars encode observed temperature ranges and are superimposed on gray bars encoding average temperature ranges. Corresponding Week, Month, and Year charts display the same data." style="width: 100%;"/>
 
