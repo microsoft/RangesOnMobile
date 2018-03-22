@@ -76,4 +76,11 @@ The application incorporates (and modifies) the following [CC BY 3.0](https://cr
 ## Additional attribution
 
 `public/preloader.js` (preloading image assets) uses code published in a blog post by Dimitar Christoff on 2012-05-18 (no license provided) "[Preloading images using javascript, the right way and without frameworks](http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html)": [http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html](http://fragged.org/preloading-images-using-javascript-the-right-way-and-without-frameworks_744.html)
-	
+
+`public/src/rangeChart.js` features a radial layout that incorporates aspects of [a bl.ocks.org example by Nadieh Bremer](http://bl.ocks.org/nbremer/a43dbd5690ccd5ac4c6cc392415140e7). For generating SVG gradients for each range mark, we drew inspiration from [Nadieh](https://www.visualcinnamon.com/)'s 2016 blog post "[Boost D3.js charts with SVG gradients](https://www.creativebloq.com/how-to/boost-d3js-charts-with-svg-gradients)".
+
+## See also
+
+Other implementations of radial range charts include a [bl.ocks.org example by Susie Lu](https://bl.ocks.org/susielu/b6bdb82045c2aa8225f5) and a [subsequent interactive version by Elijah Meeks](https://bl.ocks.org/emeeks/2fffa9abe50ac97603c7). 
+
+For an example of a linear range chart spanning 7 months, see this [bl.ocks.org example by Mike Bostock](https://bl.ocks.org/mbostock/3cfa2d1dbae2162a60203b287431382c).
