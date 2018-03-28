@@ -27,7 +27,7 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
                          show.legend = F, 
                          position=position_dodge(width=0.5))
   
-  g <- g + geom_point(aes(color=datatype), size=2, show.legend = F, position=position_dodge(width=0.5))
+  g <- g + geom_point(aes(color=datatype), size=1.125, show.legend = F, position=position_dodge(width=0.5))
   
   if (vLineVal >= ymin & vLineVal <= ymax){
     g <- g + geom_hline(aes(yintercept=vLineVal), colour="#666666", linetype = 2, size=0.5)
@@ -39,11 +39,13 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
     scale_y_continuous(limits = c(ymin,ymax), labels = scales::percent) +
     scale_x_discrete(name="",breaks,techniques)+
     coord_flip() +
-    theme(panel.background = element_rect(fill = '#F5F5DC', colour = 'white'),
-    # theme(panel.background = element_rect(fill = '#EEEEEE', colour = 'white'),
+    # theme(panel.background = element_rect(fill = '#F5F5DC', colour = 'white'),
+    theme(panel.background = element_rect(fill = '#EEEEEE', colour = 'white'),
           axis.text.x = element_text(size=8),
           axis.title=element_blank(),
           axis.text.y=element_text(colour = "black",face = "italic"),
+          axis.ticks.y=element_blank(),
+          # axis.text.y=element_blank(),
           legend.title = element_blank(),
           legend.position = 'bottom',
           panel.grid.major = element_line(colour = "#DDDDDD"),
@@ -53,7 +55,7 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
           panel.spacing = unit(0.5, "lines"),
           strip.background = element_rect(fill = "NA"),
           strip.placement = "outside",
-          # strip.text.x = element_blank(),
+          strip.text.x = element_blank(),
           strip.text = element_text(face = "bold",size=8),
           strip.text.y = element_text(angle = 180))
 

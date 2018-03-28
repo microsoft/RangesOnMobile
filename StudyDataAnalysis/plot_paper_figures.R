@@ -15,7 +15,7 @@ RT_r_min.df$task_name <- revalue(RT_r_min.df$task_name, c("All Tasks" = "Overall
 
 plot_RT_r_min <- dualChart(RT_r_min.df,RT_r_min.df$representation,nbTechs = 2, ymin = 2, ymax = 9, "", "", 0)
 
-ggsave(plot = plot_RT_r_min, filename = "plot_RT_r_min.pdf", device ="pdf", width = 7.5, height = 3.5, units = "in", dpi = 300)
+ggsave(plot = plot_RT_r_min, filename = "plot_RT_r_min.pdf", device="pdf", width = 7.5, height = 2.75, units = "in", dpi = 300)
 
 #error rate
 
@@ -32,7 +32,7 @@ err_rate_r_min.df$task_name <- revalue(err_rate_r_min.df$task_name, c("All Tasks
 
 plot_err_rate_r_min <- dualChart(err_rate_r_min.df,err_rate_r_min.df$representation,nbTechs = 2, ymin = 0, ymax = 0.6, "", "", 0)
 
-ggsave(plot = plot_err_rate_r_min, filename = "plot_err_rate_r_min.pdf", device ="pdf", width = 7.5, height = 3.5, units = "in", dpi = 300)
+ggsave(plot = plot_err_rate_r_min, filename = "plot_err_rate_r_min.pdf", device ="pdf", width = 7.5, height = 2.75, units = "in", dpi = 300)
 
 #error magnitude
 
@@ -48,7 +48,7 @@ err_r_min.df$task_name <- revalue(err_r_min.df$task_name, c("All Tasks" = "T1::T
 
 plot_err_r_min <- dualChart(err_r_min.df,err_r_min.df$representation,nbTechs = 2, ymin = 0, ymax = 0.21, "", "Error Magnitude (% of data domain). Error Bars, 95% CIs", 0)
 
-ggsave(plot = plot_err_r_min, filename = "plot_err_r_min.pdf", device ="pdf", width = 7.5, height = 3, units = "in", dpi = 300)
+ggsave(plot = plot_err_r_min, filename = "plot_err_r_min.pdf", device ="pdf", width = 7.5, height = 2.5, units = "in", dpi = 300)
 
 #compare between error
 
@@ -60,7 +60,7 @@ compare_between_err_r_min.df$task_name <- revalue(compare_between_err_r_min.df$t
 
 plot_compare_between_err_r_min <- dualChart(compare_between_err_r_min.df,compare_between_err_r_min.df$representation,nbTechs = 2, ymin = 0, ymax = 0.6, "", "Error Magnitude (% of data domain). Error Bars, 95% CIs", 0)
 
-ggsave(plot = plot_compare_between_err_r_min, filename = "plot_compare_between_err_r_min.pdf", device ="pdf", width = 7.5, height = 0.75, units = "in", dpi = 300)
+ggsave(plot = plot_compare_between_err_r_min, filename = "plot_compare_between_err_r_min.pdf", device ="pdf", width = 7.5, height = 0.62, units = "in", dpi = 300)
 
 
 #preference
@@ -77,7 +77,7 @@ preference_CI_min.df$upperBound_CI <- preference_CI_min.df$upperBound_CI / 100
 
 preference_CI_min.df$representation <- revalue(preference_CI_min.df$representation, c("radial" = "R","linear" = "L"))
 
-plot_pref_r_min <- dualChart(preference_CI_min.df,preference_CI_min.df$representation,nbTechs = 2, ymin = 0, ymax = 100, "", "", 0)
+plot_pref_r_min <- dualChart(preference_CI_min.df,preference_CI_min.df$representation,nbTechs = 2, ymin = 0, ymax = 1, "", "", 0)
 
 ggsave(plot = plot_pref_r_min, filename = "plot_pref_r_min.pdf", device ="pdf", width = 3.75, height = 1.25, units = "in", dpi = 300)
 
@@ -115,7 +115,7 @@ RT_r_diff_min.df$task_name <- revalue(RT_r_diff_min.df$task_name, c("All Tasks" 
 # RT_r_diff_min.df <- RT_r_diff_min.df[RT_r_diff_min.df$task_name != "T1-LD" & RT_r_diff_min.df$task_name != "T5-CR",]
 RT_r_diff_min.df <- RT_r_diff_min.df[RT_r_diff_min.df$facet != "Week" & RT_r_diff_min.df$facet != "Month" & RT_r_diff_min.df$facet != "Year",]
 
-plot_RT_r_diff_min <- dualChart(RT_r_diff_min.df,RT_r_diff_min.df$ratio,nbTechs = 1, ymin = 0.95, ymax = 1.45, "", "Trial Completion Time Ratios. Error Bars, 95% CIs", 1)
+plot_RT_r_diff_min <- dualChart(RT_r_diff_min.df,RT_r_diff_min.df$ratio,nbTechs = 1, ymin = 0.975, ymax = 1.45, "", "Trial Completion Time Ratios. Error Bars, 95% CIs", 1)
 
 ggsave(plot = plot_RT_r_diff_min, filename = "plot_RT_r_diff_min.pdf", device ="pdf", width = 3.75, height = 2, units = "in", dpi = 300)
 
@@ -154,7 +154,7 @@ RT_r_shrink.df$task_name <- revalue(RT_r_shrink.df$task_name, c("Week" = "W",
 RT_r_shrink.df$task_name <- ordered(RT_r_shrink.df$task_name, levels = c("Y", "M", "W"))
 RT_r_shrink.df$facet <- ""
 
-plot_RT_r_shrink <- dualChart(RT_r_shrink.df,RT_r_shrink.df$ratio,nbTechs = 1, ymin = 0.95, ymax = 1.45, "", "", 1)
+plot_RT_r_shrink <- dualChart(RT_r_shrink.df,RT_r_shrink.df$ratio,nbTechs = 1, ymin = 1, ymax = 1.45, "", "", 1)
 ggsave(plot = plot_RT_r_shrink, filename = "plot_RT_r_shrink.pdf", device ="pdf", width = 3.75, height = 1, units = "in", dpi = 300)
 
 # completion time g diff
@@ -166,9 +166,9 @@ RT_g_diff_min.df <- RT_g_diff_min.df[RT_g_diff_min.df$facet == "Both Representat
 RT_g_diff_min.df$task_name <- revalue(RT_g_diff_min.df$task_name, c("All Tasks" = "Overall",
                                                                     "Locate Min / Max" = "T3-LM"
 ))
-RT_g_diff_min.df$ratio <- revalue(RT_g_diff_min.df$ratio, c("Month - Week" = "M : W",
-                                                            "Year - Month" = "Y : M",
-                                                            "Year - Week" = "Y : W"
+RT_g_diff_min.df$ratio <- revalue(RT_g_diff_min.df$ratio, c("Month - Week" = "M / W",
+                                                            "Year - Month" = "Y / M",
+                                                            "Year - Week" = "Y / W"
 ))
 
 plot_RT_g_diff_min <- dualChart(RT_g_diff_min.df,RT_g_diff_min.df$ratio ,nbTechs = 3, ymin = 0.95, ymax = 2.5, "", "", 1)
@@ -189,7 +189,7 @@ err_rate_g_diff_min.df$ratio <- revalue(err_rate_g_diff_min.df$ratio, c("Month -
                                                                         "Year - Week" = "Y-W"
 ))
 
-plot_err_rate_g_diff_min <- dualChart(err_rate_g_diff_min.df,err_rate_g_diff_min.df$ratio,nbTechs = 3, ymin = -0.25, ymax = 0.25, "", "Error Rate Pairwise Differences. Error Bars, 95% CIs", 0)
+plot_err_rate_g_diff_min <- dualChart(err_rate_g_diff_min.df,err_rate_g_diff_min.df$ratio,nbTechs = 3, ymin = -0.175, ymax = 0.25, "", "Error Rate Pairwise Differences. Error Bars, 95% CIs", 0)
 
 ggsave(plot = plot_err_rate_g_diff_min, filename = "plot_err_rate_g_diff_min.pdf", device ="pdf", width = 3.75, height = 1.75, units = "in", dpi = 300)
 
@@ -207,7 +207,7 @@ err_diff_g_min.df$ratio <- revalue(err_diff_g_min.df$ratio, c("Month - Week" = "
                                                                         "Year - Week" = "Y-W"
 ))
 
-plot_err_diff_g_min <- dualChart(err_diff_g_min.df,err_diff_g_min.df$ratio,nbTechs = 3, ymin = -0.06, ymax = 0.06, "", "Error Rate Pairwise Differences. Error Bars, 95% CIs", 0)
+plot_err_diff_g_min <- dualChart(err_diff_g_min.df,err_diff_g_min.df$ratio,nbTechs = 3, ymin = -0.045, ymax = 0.06, "", "Error Rate Pairwise Differences. Error Bars, 95% CIs", 0)
 
 ggsave(plot = plot_err_diff_g_min, filename = "plot_err_diff_g_min.pdf", device ="pdf", width = 3.75, height = 1, units = "in", dpi = 300)
 
