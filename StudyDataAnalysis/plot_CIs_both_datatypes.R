@@ -1,7 +1,7 @@
 library(ggplot2)
 library(reshape2)
 
-dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLabel = "I am the X axis", yAxisLabel = "I am the Y Label", vLineVal = 0){
+dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLabel = "I am the X axis", yAxisLabel = "I am the Y Label", vLineVal = 0, displayXLabels = T, displayYLabels = T, percentScale = F, displayFacetLabel = T){
   #tr <- t(resultTable)
   if(nbTechs <= 0){
     stop('Please give a positive number of Techniques, nbTechs');
@@ -27,25 +27,29 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
                          show.legend = F, 
                          position=position_dodge(width=0.5))
   
-  g <- g + geom_point(aes(color=datatype), size=1.125, show.legend = F, position=position_dodge(width=0.5))
+  g <- g + geom_point(aes(color=datatype), size=1.125, show.legend = F)
   
   if (vLineVal >= ymin & vLineVal <= ymax){
     g <- g + geom_hline(aes(yintercept=vLineVal), colour="#666666", linetype = 2, size=0.5)
   }
   
-  g <- g + scale_color_manual(values = c("#1F77B4", "#FF7F0E")) +
-    labs(x = xAxisLabel, y = yAxisLabel) + 
-    # scale_y_continuous(limits = c(ymin,ymax)) +
-    scale_y_continuous(limits = c(ymin,ymax), labels = scales::percent) +
-    scale_x_discrete(name="",breaks,techniques)+
+  cols <- c("Sleep" = "#1F77B4", "Temperature" = "#FF7F0E")
+  g <- g + scale_color_manual(values = cols) +
+    labs(x = xAxisLabel, y = yAxisLabel)
+  
+  if (percentScale) {
+    g <- g + scale_y_continuous(limits = c(ymin,ymax), labels = scales::percent)
+  }
+  else {
+    g <- g + scale_y_continuous(limits = c(ymin,ymax))
+  }
+  g <- g + scale_x_discrete(name="",breaks,techniques)+
     coord_flip() +
     # theme(panel.background = element_rect(fill = '#F5F5DC', colour = 'white'),
     theme(panel.background = element_rect(fill = '#EEEEEE', colour = 'white'),
-          axis.text.x = element_text(size=8),
           axis.title=element_blank(),
-          axis.text.y=element_text(colour = "black",face = "italic"),
           axis.ticks.y=element_blank(),
-          # axis.text.y=element_blank(),
+          axis.ticks.x=element_blank(),
           legend.title = element_blank(),
           legend.position = 'bottom',
           panel.grid.major = element_line(colour = "#DDDDDD"),
@@ -55,16 +59,35 @@ dualChart <- function(resultTable, techniques, nbTechs = -1, ymin, ymax, xAxisLa
           panel.spacing = unit(0.5, "lines"),
           strip.background = element_rect(fill = "NA"),
           strip.placement = "outside",
-          strip.text.x = element_blank(),
-          strip.text = element_text(face = "bold",size=8),
-          strip.text.y = element_text(angle = 180))
+          strip.text.y = element_text(face = "bold",size=7,angle = 180))
+  
+  if (displayXLabels) {
+    g <- g + theme(axis.text.x = element_text(size=7))
+  }
+  else {
+    g <- g + theme(axis.text.x = element_blank())
+  }
+  
+  if (displayYLabels) {
+    g <- g + theme(axis.text.y=element_text(colour = "black",face = "italic",size=7))
+  }
+  else {
+    g <- g + theme(axis.text.y=element_blank())
+  }
+  
+  if (displayFacetLabel) {
+    g <- g + theme(strip.text.x = element_text(face = "bold",size=7))
+  }
+  else {
+    g <- g + theme(strip.text.x = element_blank())
+  }
 
-    if (length(unique(resultTable$facet)) > 1 ) {
-      g <- g + facet_grid(task_name ~ facet, switch='y')
-    }
-    else {
+  if (length(unique(resultTable$facet)) > 1 ) {
+    g <- g + facet_grid(task_name ~ facet, switch='y')
+  }
+  else {
     g <- g + facet_grid(task_name ~ ., switch='y')
-    }
+  }
     
   
   return(g)
