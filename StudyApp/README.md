@@ -2,7 +2,7 @@
 
 A mobile-only web application for evaluating alternative visual representations of quantitative ranges for value retrieval and comparison tasks spanning different granularities of time. 
 
-An instance of the application is running at [aka.ms/ranges](http://aka.ms/ranges), which can be viewed device running the Chrome or Safary mobile web browser.
+An instance of the application is running at [aka.ms/ranges](http://aka.ms/ranges), which can be viewed device running the Chrome or Safari mobile web browser.
 
 Maintained by [Matthew Brehmer](https://github.com/mattbrehmer).
 
