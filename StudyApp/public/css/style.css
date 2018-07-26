@@ -2,8 +2,8 @@
 
 @media only screen 
 and (min-device-width: 320px) 
-and (max-device-width: 812px)
-and (max-device-height: 812px)
+and (max-device-width: 1440px)
+and (max-device-height: 1440px)
 and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: portrait) {
 
@@ -534,7 +534,7 @@ and (orientation: landscape) {
 }
 
 @media only screen 
-and (min-device-width: 812px) {
+and (min-device-width: 1440px) {
 
   body, text {
     margin: 0px;
@@ -594,7 +594,7 @@ and (min-device-width: 812px) {
 }
 
 @media only screen 
-and (min-device-height: 812px) {
+and (min-device-height: 1440px) {
 
   body, text {
     margin: 0px;
