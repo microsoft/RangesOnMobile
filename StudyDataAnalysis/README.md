@@ -1,6 +1,6 @@
-# RangesOnMobile: Study Data + Analysis Scripts
+# Study Data + Analysis Scripts
 
-Analyzing the results of an graphical perception study focusing on the display of quantitative ranges on mobile devices.
+Analyzing the results of our experiment focusing on visualizing ranges on mobile devices.
 
 Maintained by [Matthew Brehmer](https://github.com/mattbrehmer).
 
