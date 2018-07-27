@@ -2,7 +2,7 @@
 
 This repository contains supplemental material for the [IEEE InfoVis 2018](http://ieeevis.org/year/2018/info/papers) paper **[Visualizing Ranges over Time on Mobile Phones: A Task-Based Crowdsourced Evaluation](https://www.microsoft.com/en-us/research/publication/visualizing-ranges-over-time-on-mobile-phones-a-task-based-crowdsourced-evaluation/)** by [Matthew Brehmer (Microsoft Research)](mailto:mabrehme@microsoft.com), [Bongshin Lee (Microsoft Research)](mailto:bongshin@microsoft.com), [Petra Isenberg (Inria)](mailto:petra.isenberg@inria.fr), and [Eun Kyoung Choe (University of Maryland)](mailto:choe@umd.edu). 
 
-It contains including [source code for software used in an experiment](StudyApp) as well as [experimental data and analysis scripts](StudyDataAnalysis).
+It contains [source code for software used in our experiment](StudyApp) as well as our [experimental data and analysis scripts](StudyDataAnalysis).
 
 This respository also includes [high-resolution versions of the paper figures](PaperFigures); figures 2-12 were generated with [ggplot2](https://ggplot2.tidyverse.org/) (see [plot_paper_figures.R](StudyDataAnalysis/plot_paper_figures.R)). This repository also contains [mobile screen capture videos](SupplementalVideos) of two experimental sessions (one with Temperature data and a second with Sleep data); the videos were recorded using an iPhone 5s running the Chrome mobile browser, with iOS accessibility controls toggled to show the touch point.    
 
