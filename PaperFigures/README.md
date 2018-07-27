@@ -1,4 +1,4 @@
-# RangesOnMobile: Paper Figures
+# IEEE InfoVis 2018 Paper Figures
 
 This respository also includes high-resolution versions of the paper figures; figures 2-12 were generated with [ggplot2](https://ggplot2.tidyverse.org/) (see [plot_paper_figures.R](../StudyDataAnalysis/plot_paper_figures.R)) which were generated with [ggplot2](https://ggplot2.tidyverse.org/).    
 
