@@ -4,6 +4,8 @@ A mobile-only web application for evaluating alternative visual representations 
 
 An instance of the application is running at [aka.ms/ranges](http://aka.ms/ranges), which can be viewed device running the Chrome or Safari mobile web browser.
 
+<img src="../SupplementalVideos/supplemental.gif" title="A mobile-only web application for evaluating alternative visual representations of quantitative ranges for value retrieval and comparison tasks spanning different granularities of time." alt="A mobile-only web application for evaluating alternative visual representations of quantitative ranges for value retrieval and comparison tasks spanning different granularities of time." style="width: 100%;"/>
+
 Maintained by [Matthew Brehmer](https://github.com/mattbrehmer).
 
 ## Setup / Testing
